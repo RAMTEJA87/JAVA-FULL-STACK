@@ -73,7 +73,6 @@ public class Cookies extends HttpServlet {
 ### Cookies.html
 
 ```html
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -103,13 +102,10 @@ public class Cookies extends HttpServlet {
 public class DateTime extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public DateTime() {
-        super();
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        response.setIntHeader("Refresh", 5);
         out.println("Date & Time : " + new java.util.Date());
     }
 }
@@ -120,25 +116,13 @@ public class DateTime extends HttpServlet {
 ### StudentConn.java
 
 ```java
-package com.example;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/StudentConn")
 public class StudentConn extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public StudentConn() {
-        super();
-    }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         int id = Integer.parseInt(request.getParameter("id"));
@@ -156,7 +140,6 @@ public class StudentConn extends HttpServlet {
 ### StudentConn.html
 
 ```html
-<!DOCTYPE html>
 <html>
 <head>
     <title>Student Management</title>
@@ -187,22 +170,13 @@ public class StudentConn extends HttpServlet {
 ### ServletCurd.java
 
 ```java
-package com.example;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.*;
 
 @WebServlet("/ServletCurd")
 public class ServletCurd extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         int id = Integer.parseInt(request.getParameter("id"));
