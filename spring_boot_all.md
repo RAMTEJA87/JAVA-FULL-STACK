@@ -15,7 +15,6 @@
 course-management/
 └── src/main/
     ├── java/com/example/demo/
-    │   ├── CourseApplication.java
     │   ├── entity/Course.java
     │   ├── repository/CourseRepository.java
     │   ├── service/CourseService.java
@@ -26,32 +25,13 @@ course-management/
 ## `application.properties`
 
 ``` properties
-spring.application.name=course-management
 server.port=8080
-
-spring.datasource.url=jdbc:h2:mem:coursedb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
+spring.datasource.url=url
+spring.datasource.username=root
+spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
 ```
 
-## `CourseApplication.java`
-
-``` java
-package com.example.demo;
-
-@SpringBootApplication
-public class CourseApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(CourseApplication.class, args);
-    }
-}
-```
 
 ## `entity/Course.java`
 
@@ -192,7 +172,6 @@ GET  http://localhost:8080/courses
 patient-vitals/
 └── src/main/
     ├── java/com/example/demo/
-    │   ├── PatientVitalsApplication.java
     │   ├── entity/VitalReading.java
     │   ├── repository/VitalReadingRepository.java
     │   ├── service/VitalReadingService.java
@@ -203,32 +182,13 @@ patient-vitals/
 ## `application.properties`
 
 ``` properties
-spring.application.name=patient-vitals
 server.port=8080
-
-spring.datasource.url=jdbc:h2:mem:vitalsdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
+spring.datasource.url=url
+spring.datasource.username=root
+spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
 ```
 
-## `PatientVitalsApplication.java`
-
-``` java
-package com.example.demo;
-
-@SpringBootApplication
-public class PatientVitalsApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(PatientVitalsApplication.class, args);
-    }
-}
-```
 
 ## `entity/VitalReading.java`
 
@@ -394,7 +354,6 @@ GET  http://localhost:8080/vitals/101
 employee-management/
 └── src/main/
     ├── java/com/example/demo/
-    │   ├── EmployeeApplication.java
     │   ├── entity/Employee.java
     │   ├── repository/EmployeeRepository.java
     │   ├── service/EmployeeService.java
@@ -405,32 +364,13 @@ employee-management/
 ## `application.properties`
 
 ``` properties
-spring.application.name=employee-management
 server.port=8080
-
-spring.datasource.url=jdbc:h2:mem:employeedb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
+spring.datasource.url=url
+spring.datasource.username=root
+spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
 ```
 
-## `EmployeeApplication.java`
-
-``` java
-package com.example.demo;
-
-@SpringBootApplication
-public class EmployeeApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(EmployeeApplication.class, args);
-    }
-}
-```
 
 ## `entity/Employee.java`
 
@@ -571,7 +511,6 @@ GET  http://localhost:8080/employees
 book-management/
 └── src/main/
     ├── java/com/example/demo/
-    │   ├── BookApplication.java
     │   ├── entity/Book.java
     │   ├── repository/BookRepository.java
     │   ├── service/BookService.java
@@ -582,32 +521,13 @@ book-management/
 ## `application.properties`
 
 ``` properties
-spring.application.name=book-management
 server.port=8080
-
-spring.datasource.url=jdbc:h2:mem:bookdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
+spring.datasource.url=url
+spring.datasource.username=root
+spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
 ```
 
-## `BookApplication.java`
-
-``` java
-package com.example.demo;
-
-@SpringBootApplication
-public class BookApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(BookApplication.class, args);
-    }
-}
-```
 
 ## `entity/Book.java`
 
